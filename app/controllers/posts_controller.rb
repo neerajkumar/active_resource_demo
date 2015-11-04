@@ -8,7 +8,7 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
+    @post = Post.new(title: nil, description: nil, author: nil)
   end
 
   def create
