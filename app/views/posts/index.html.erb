@@ -1,0 +1,11 @@
+<% @posts.each do |post| -%>
+  <%= post.title -%>
+  <br />
+  <%= post.description -%>
+  </br>
+  <%= post.author -%>
+  <br />  <br />
+    <%= link_to "Edit", edit_post_path(post) -%>
+<% end %>
+
+<%= link_to "New Post", new_post_path -%>
