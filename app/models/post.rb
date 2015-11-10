@@ -14,10 +14,6 @@ class Post < ActiveResource::Base
     self.save
   end
 
-  def as_json(options)
-    super.merge(:include=>[:comments])
-  end
-
 
   protected
 
