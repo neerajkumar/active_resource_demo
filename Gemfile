@@ -27,6 +27,7 @@ gem 'activeresource'
 gem 'activeresource-response'
 gem 'net-http-spy'
 gem 'rb-readline'
+gem 'minitest', '5.8.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
