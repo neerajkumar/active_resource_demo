@@ -11,6 +11,13 @@ class PostsController < ApplicationController
     @post = Post.new(title: nil, description: nil, author: nil)
   end
 
+  def show
+    @post = Post.find(params[:id])
+    puts "----------------"
+    puts @post.inspect
+    @comments = @post.comments   
+  end  
+
   def create
     @post = Post.new(post_params)
 

@@ -39,3 +39,5 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end
+Net::HTTP.http_logger_options = {:body => true}
+Net::HTTP.http_logger = Logger.new('log/webservice.log') 

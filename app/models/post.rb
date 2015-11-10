@@ -2,6 +2,8 @@ class Post < ActiveResource::Base
 
   self.site = "http://localhost:3000"
 
+  has_many :comments
+
   # before_save :validate
 
   def update_post(params={})
@@ -10,6 +12,10 @@ class Post < ActiveResource::Base
     self.author = params[:author]
 
     self.save
+  end
+
+  def as_json(options)
+    super.merge(:include=>[:comments])
   end
 
 
